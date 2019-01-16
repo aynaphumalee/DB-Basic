@@ -1,0 +1,83 @@
+body{
+    font-family: "TH Sarabun New";
+    font-weight: bold;
+    background-image: linear-gradient(to right,pink,peachpuff);
+}
+h2{
+    font-size: 55px;
+}
+
+div{
+    width: 200px;
+    height: 100px ;
+    margin: auto;
+}
+
+label{
+    font-size: 27px;
+    display: block;
+}
+
+input[type=text]{
+    width: 92%;
+    padding: 5px 20px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password]{
+    width: 92%;
+    padding: 5px 20px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email]{
+    width: 92%;
+    padding: 5px 20px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    font-family: "TH Sarabun New";
+    font-size: 20px;
+    font-weight: bold;
+    width: 45%;
+    height: 27%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=button]{
+    font-family: "TH Sarabun New";
+    font-size: 20px;
+    font-weight: bold;
+    width: 45%;
+    height: 27%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]:hover{
+    background-color: aliceblue;
+}
+
+button[type=button]:hover{
+    background-color: aliceblue;
+}
+
+
+
+

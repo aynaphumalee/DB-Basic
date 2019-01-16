@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            font-family: "TH Sarabun New";
+            font-size: 20px;
+            background-image: linear-gradient(to right,lightskyblue,powderblue);;
+        }
+        h1{
+            font-family: "TH Sarabun New";
+            font-size: 25px;
+            margin-top: -32px;;
+            margin-left: 7px;
+        }
+
+        /* The popup chat - hidden by default */
+        .chat-popup {
+            width: 340px;
+            height: 360px;
+
+            right: 100px;
+            border: 1px solid #f1f1f1;
+            z-index: 9;
+            background-color: white;
+        }
+
+        input {
+            width: 251px;
+            height: 20px; ;
+            padding: 15px;
+            margin: 0px 0 22px 5px;
+            border: none;
+            background: #f1f1f1;
+            resize: none;
+            border-radius: 20px;
+        }
+
+        /* When the textarea gets focus, do something */
+        input:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        button[type=submit]{
+
+        }
+
+        a,a:visited{
+            color: dimgrey;
+        }
+
+        #myform{
+            background-color: whitesmoke;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            border: 1px solid whitesmoke ;
+            margin-left: 314px;
+        }
+        .time{
+            width: 325px;
+            height: 27px;
+            border: 1px whitesmoke ;
+            border-bottom: 1px solid whitesmoke;
+            background-color: white;
+        }
+        #btn_close{
+            border: none;
+            background-color: white;
+        }
+        #btn_close:hover{
+            color: dimgrey;
+        }
+
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#myform").click(function(){
+                // $("#text").html("ทดสอบๆ")
+                // $.get( "https://reqres.in/api/users/2", function( data ) {
+                //     console.log(data.data.first_name)
+                //     $("#text").html(data.data.first_name)
+                // });
+                let user_input = $("#user_input").val();
+                console.log(user_input)
+
+                $.post( "testApi.php", { massage: user_input})
+                    .done(function( data ) {
+                        console.log(data.status)
+                    });
+
+
+            });
+        });
+    </script>
+
+</head>
+
+
+<body>
+
+<div class="chat-popup">
+    <div class="time">
+        <button id="btn_close" onclick="closeForm()">&times;</button></div>
+    <h1 id="text">น่าเบื่อ</h1>
+
+    <br><br><br><br><br><br><br><br><br>
+
+
+    <input id="user_input"  name="massage" autofocus>
+    <button id="myform"><i class="fa fa-send-o" style="font-size:27px"></i></button>
+
+</div>
+
+</body>
+</html>
